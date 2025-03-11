@@ -7,7 +7,7 @@ const About = () => {
       {/* Hero Section */}
       <div className="relative h-[50vh] overflow-hidden">
         <img
-          src="/src/img/restaurant-interior.jpg"
+          src="./src/img/restaurant-interior.jpg"
           alt="Elysium Interior"
           className="absolute w-full h-full object-cover object-center"
           style={{ filter: "brightness(0.7)" }}
@@ -59,7 +59,7 @@ const About = () => {
           >
             <div className="aspect-square overflow-hidden">
               <img
-                src="/src/img/chef.jpg"
+                src="./src/img/chef.jpg"
                 alt="Chef Jean-Pierre Dubois"
                 className="w-full h-full object-cover"
               />

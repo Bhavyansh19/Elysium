@@ -1,10 +1,4 @@
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const LINKS = [
@@ -28,16 +22,25 @@ const LINKS = [
   },
   {
     title: "Contact",
-    items: ["+91 123 456 7890", "+91 902 480 1284", "contact@elysium.com"],
+    items: [
+      "+91 123 456 7890",
+      "+91 902 480 1284",
+      "bookatelysium@elysium.com",
+    ],
   },
 ];
 
 const socialLinks = [
-  { href: "https://facebook.com", icon: <FaFacebook size={18} /> },
-  { href: "https://instagram.com", icon: <FaInstagram size={18} /> },
-  { href: "https://twitter.com", icon: <FaTwitter size={18} /> },
-  { href: "https://youtube.com", icon: <FaYoutube size={18} /> },
-  { href: "https://linkedin.com", icon: <FaLinkedin size={18} /> },
+  {
+    href: "https://www.instagram.com/bhxvyansh.j?igsh=MWlnam9rYXh6anJj&utm_source=qr",
+    icon: <FaInstagram size={18} />,
+  },
+  { href: "https://x.com/SxgeDzns", icon: <FaTwitter size={18} /> },
+  { href: "https://github.com/Bhavyansh19", icon: <FaGithub size={18} /> },
+  {
+    href: "https://www.linkedin.com/in/bhavyansh19/",
+    icon: <FaLinkedin size={18} />,
+  },
 ];
 
 const Footer = () => {
