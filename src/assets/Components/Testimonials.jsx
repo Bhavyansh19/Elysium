@@ -98,7 +98,7 @@ const TestimonialCard = ({ testimonial, index }) => {
 const Testimonials = () => {
   return (
     <section className="py-20 bg-black relative">
-      <div className="absolute inset-0 bg-[url('./src/img/pattern-dark.jpg')] opacity-5"></div>
+      <div className="absolute inset-0 bg-[url('/img/pattern-dark.jpg')] opacity-5"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

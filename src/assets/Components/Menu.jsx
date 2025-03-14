@@ -147,7 +147,7 @@ const Menu = () => {
       {/* Hero Section */}
       <div className="relative h-[40vh] overflow-hidden">
         <img
-          src="./src/img/menu-header.jpg"
+          src="/img/menu-header.jpg"
           alt="Elysium Culinary Creations"
           className="absolute w-full h-full object-cover object-center"
           style={{ filter: "brightness(0.5)" }}

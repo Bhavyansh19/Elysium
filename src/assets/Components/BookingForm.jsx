@@ -86,7 +86,7 @@ const BookingForm = () => {
     >
       <div className="absolute inset-0 opacity-20">
         <img
-          src="./src/img/pattern.jpg"
+          src="/img/pattern.jpg"
           alt=""
           className="w-full h-full object-cover"
         />
@@ -117,7 +117,7 @@ const BookingForm = () => {
             className="hidden lg:block"
           >
             <img
-              src="./src/img/table-setting.jpg"
+              src="/img/table-setting.jpg"
               alt="Elegant table setting"
               className="w-full h-auto rounded-none"
             />

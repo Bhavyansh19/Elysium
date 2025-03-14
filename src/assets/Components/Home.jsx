@@ -8,8 +8,8 @@ const Home = () => {
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
-          src="./src/img/bg.jpg"
-          alt="Elysium Restaurant"
+            src="/img/bg.jpg"
+            alt="Elysium Restaurant"
           className="absolute w-full h-full object-cover object-center"
           style={{ filter: "brightness(0.5)" }}
         />
