@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./assets/Components/Home";
 import BookingForm from "./assets/Components/BookingForm";
@@ -27,7 +26,7 @@ const App = () => {
             </main>
           }
         />
-        <Route path="/Admin" element={<Admin />} /> {/* Admin Route */}
+        <Route path="/admin" element={<Admin />} /> {/* Admin Route */}
       </Routes>
     </Router>
   );

@@ -2,10 +2,9 @@ import pg from "pg";
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import dotenv from "dotenv";
+import "dotenv/config";
 import cron from "node-cron";
 
-dotenv.config({ path: ".././.env" });
 const app = express();
 const port = 4000;
 
@@ -13,9 +12,13 @@ const port = 4000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const client = new pg.Client({
+import pkg from "pg";
+const { Client } = pkg;
+console.log(process.env.DB_HOST);
+
+const client = new Client({
   host: process.env.DB_HOST,
-  port: Number(process.env.DB_PORT), // Ensure port is a number
+  port: process.env.DB_PORT,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
@@ -49,7 +52,7 @@ app.post("/bookings", async (req, res) => {
     await client.query(
       `INSERT INTO bookings (name, email, phoneno, resdate, restime, noofpeople, specialnotes) 
              VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-      [name, email, phoneNo, resDate, resTime, noOfPeople, specialNotes || ""]
+      [name, email, phoneNo, resDate, resTime, noOfPeople, specialNotes || ""],
     );
     res.status(201).json({ message: "Booking successful" });
   } catch (err) {
@@ -62,7 +65,7 @@ app.post("/bookings", async (req, res) => {
 app.get("/getbookings", async (req, res) => {
   try {
     const result = await client.query(
-      "SELECT * FROM bookings ORDER BY resdate DESC"
+      "SELECT * FROM bookings ORDER BY resdate DESC",
     );
     res.status(200).json(result.rows);
   } catch (err) {
