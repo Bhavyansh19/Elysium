@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./assets/protectedRoute.jsx";
 import Home from "./assets/Components/Home";
 import BookingForm from "./assets/Components/BookingForm";
 import About from "./assets/Components/About.jsx";
 import Testimonials from "./assets/Components/Testimonials.jsx";
 import Footer from "./assets/Components/Footer.jsx";
-import Admin from "./assets/Components/Admin.jsx";
+import Admin from "./assets/Components/page.jsx";
 import Menu from "./assets/Components/Menu.jsx";
 import Navbar from "./assets/Components/Navbar.jsx";
 
@@ -26,7 +27,14 @@ const App = () => {
             </main>
           }
         />
-        <Route path="/admin" element={<Admin />} /> {/* Admin Route */}
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );
