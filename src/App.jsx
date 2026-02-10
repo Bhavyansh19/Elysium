@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProtectedRoute from "./assets/protectedRoute.jsx";
+import ProtectedRoute from "./assets/Components/ProtectedRoute.jsx";
 import Home from "./assets/Components/Home";
 import BookingForm from "./assets/Components/BookingForm";
 import About from "./assets/Components/About.jsx";
